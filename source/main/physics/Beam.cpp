@@ -130,7 +130,7 @@ Actor::~Actor()
         this->fadeMesh(m_cab_scene_node, 1.f); // Reset transparency of "skeleton view"
 
         m_cab_scene_node->detachAllObjects();
-        m_cab_scene_node->getParentSceneNode()->removeAndDestroyChild(m_cab_scene_node->getName());
+        m_cab_scene_node->getParentSceneNode()->removeAndDestroyChild(m_cab_scene_node);
         m_cab_scene_node = nullptr;
 
         m_cab_entity->_getManager()->destroyEntity(m_cab_entity);
